@@ -1,0 +1,43 @@
+{
+  "name": "h-element-spec",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Use contextual headings within HTML",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/h-element-spec",
+  "homepage": "https://github.com/jonathantneal/h-element-spec#readme",
+  "bugs": "https://github.com/jonathantneal/h-element-spec/issues",
+  "main": "index.bs",
+  "files": [
+    "index.html"
+  ],
+  "scripts": {
+    "start": "curl https://api.csswg.org/bikeshed/ -F file=@index.bs > index.html",
+    "prepublish": "npm test && npm start && git add index.html && git commit --amend --no-edit --date=now && git push -f",
+    "test": "echint"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "devDependencies": {
+    "echint": "^4.0.1",
+    "echint-config-dev": "^1.0.0"
+  },
+  "echint": {
+    "extends": "dev"
+  },
+  "keywords": [
+    "html",
+    "spec",
+    "heading",
+    "element",
+    "h",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6"
+  ]
+}
