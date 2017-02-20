@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "start": "curl https://api.csswg.org/bikeshed/ -F file=@index.bs > index.html",
-    "prepublish": "npm test && npm start && git add index.html && git commit --amend --no-edit --date=now && git push -f",
+    "prepublish": "npm test && npm start && git add index.html && git commit -m \"Render index.html\" && git push",
     "test": "echint"
   },
   "engines": {
